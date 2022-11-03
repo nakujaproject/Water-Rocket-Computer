@@ -10,11 +10,11 @@
 [![Last commit](https://img.shields.io/github/last-commit/nakujaproject/easyedaTemplate.svg "Last commit")](https://github.com/nakujaproject/easyedaTemplate/commits/master)
 
 
-<a href="https://github.com/nakujaproject/easyedaTemplate"><img src="pinout/example.png?raw=true" width="500px"><br/></a>
+<a href="https://github.com/nakujaproject/easyedaTemplate"><img src="assets/nodemcu-32s.png?raw=true" width="500px"><br/></a>
 
 ## Setup
 
-## NOTE: Change evrywhere where there is nakujaproject to your own github organization name or username
+## NOTE: Change everywhere where there is nakujaproject to your own github organization name or username
 
 ### Description
 
