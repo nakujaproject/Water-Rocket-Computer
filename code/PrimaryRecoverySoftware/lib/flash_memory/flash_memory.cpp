@@ -46,13 +46,21 @@ void readFile(fs::FS &fs, const char *path)
 
 void initFlashMemory()
 {
+#if READ_FLASH == true
+    readFile(LITTLEFS, "/flights/flight_data.txt");
+    while (true)
+    {
+        ;
+    }
+#else
     if (!LITTLEFS.begin(FORMAT_LITTLEFS_IF_FAILED))
     {
         debugln("LITTLEFS Mount Failed");
         return;
     }
-
     appendFile(LITTLEFS, "/flights/flight_data.txt", "New Flight\n");
+
+#endif // PYRO_EJECTION
 }
 char *printFlashMessage(int time, float altitude, float velocity, int state)
 {
@@ -72,5 +80,5 @@ void writeFlightEventToFlash(int time, float altitude, float velocity, int state
     char *message = printFlashMessage(time, altitude, velocity, state);
     appendFile(LITTLEFS, "/flights/flight_data.txt", message);
     vPortFree(message);
-    //readFile(LITTLEFS, "/flights/flight_data.txt");
+    // readFile(LITTLEFS, "/flights/flight_data.txt");
 }

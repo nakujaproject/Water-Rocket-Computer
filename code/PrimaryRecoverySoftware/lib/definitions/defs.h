@@ -4,7 +4,7 @@
 #include <Arduino.h>
 #include <ESP32Servo.h>
 
-#define DEBUG 0
+#define DEBUG 1
 #if DEBUG == 1
 #define debug(x) Serial.print(x)
 #define debugln(x) Serial.println(x)

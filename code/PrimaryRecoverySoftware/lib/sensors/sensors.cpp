@@ -5,6 +5,8 @@
 Adafruit_BMP085 bmp;
 Adafruit_MPU6050 mpu;
 
+void ejection();
+void ejectionTimerCallback(TimerHandle_t ejectionTimerHandle);
 void init_mpu()
 {
     debugln("MPU6050 test!");
@@ -83,3 +85,5 @@ float get_base_altitude()
     debugf("Base Altitude is %.3f\n", altitude);
     return altitude;
 }
+
+
